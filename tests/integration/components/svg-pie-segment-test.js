@@ -18,17 +18,14 @@ moduleForComponent('svg-pie-segment', 'Integration | Component | svg pie segment
 
       for (; i < len; i++ ) {
         elem = this[ i ];
+        /* globals SVGElement */
         if ( elem instanceof SVGElement ) {
           var classes = $(elem).attr('class');
 
           if ( classes ) {
-            if ( classes.indexOf(value) === -1 ) {
-              return false;
-            } else {
-              return true;
-            }
+            return classes.indexOf(value) !== -1;
           } else {
-              return false;
+            return false;
           }
         }
       }
@@ -73,5 +70,5 @@ test('it renders', function(assert) {
 
   const $path = $segment.find('path');
   const d     = $path.attr('d').trim().replace(/\s+/g, ' ');
-  assert.equal(d, 'M 50 50 L 50 0 A 50 50 0 0 1 100 50 z')
+  assert.equal(d, 'M 50 50 L 50 0 A 50 50 0 0 1 100 50 z');
 });
