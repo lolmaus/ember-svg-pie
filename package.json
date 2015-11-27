@@ -1,7 +1,7 @@
 {
   "name": "ember-svg-pie",
   "version": "1.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A very lightweight, pure SVG pie chart",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,8 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "lolmaus/ember-svg-pie",
+  "homepage": "https://github.com/lolmaus/ember-svg-pie",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -37,7 +38,13 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "svg",
+    "pie",
+    "pie chart",
+    "chart",
+    "graph",
+    "pie graph"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",

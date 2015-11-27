@@ -1,6 +1,6 @@
 # ember-svg-pie
 
-A very lightweight, pure SVG pie chart.
+A very lightweight, pure SVG pie chart
 
 
 ## Requirements
