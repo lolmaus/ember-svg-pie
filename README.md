@@ -2,6 +2,12 @@
 
 A very lightweight, pure SVG pie chart
 
+[![Travis](https://travis-ci.org/lolmaus/ember-svg-pie.svg)](https://travis-ci.org/lolmaus/ember-svg-pie)
+[![npm](https://img.shields.io/npm/v/ember-svg-pie.svg)](https://www.npmjs.com/package/ember-svg-pie)
+[![npm](https://img.shields.io/npm/dm/ember-svg-pie.svg)](https://www.npmjs.com/package/ember-svg-pie)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-svg-pie.svg)](http://emberobserver.com/addons/ember-svg-pie)
+
+
 
 ## Requirements
 

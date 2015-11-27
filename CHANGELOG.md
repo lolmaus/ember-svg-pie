@@ -5,7 +5,8 @@ This project uses SemVer.
 
 ## [unreleased]
 
-No changes so far.
+### Documentation
+- Badges. :sunglasses:
 
 
 ## [1.0.1]
