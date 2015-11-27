@@ -1,6 +1,6 @@
 {
   "name": "ember-svg-pie",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A very lightweight, pure SVG pie chart",
   "directories": {
     "doc": "doc",
