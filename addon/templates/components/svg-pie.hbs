@@ -1,0 +1,14 @@
+{{#each effectiveData as |item index|}}
+
+  {{svg-pie-segment
+    class=item.class
+    fill=item.color
+    size=size
+    value=item.value
+    total=effectiveTotal
+    startAngle=(svg-pie-start-angle data=effectiveData index=index total=effectiveTotal start=startAngle)
+    stroke=stroke
+    strokeWidth=strokeWidth
+  }}
+
+{{/each}}

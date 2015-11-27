@@ -1,3 +1,65 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">ember-svg-pie</h2>
 
-{{outlet}}
+<p>
+  <a href="https://github.com/lolmaus/ember-svg-pie/">lolmaus/ember-svg-pie</a>
+</p>
+
+<pre>
+&#123;&#123;svg-pie
+  data=(array
+    (hash value=90  color="red")
+    (hash value=60  color="yellow")
+    (hash value=180 color="green")
+  )
+  total=360
+}}
+</pre>
+
+{{svg-pie
+  data=(array
+    (hash value=90  color="red")
+    (hash value=60  color="yellow")
+    (hash value=180 color="green")
+  )
+  total=360
+}}
+
+<pre>
+&#123;&#123;svg-pie
+  data=(array
+    (hash value=30   class="foo")
+    (hash value=12.5 class="bar")
+    (hash value=12.5 class="baz")
+    (hash value=30   class="quux")
+  )
+  size=150
+  stroke="black"
+  strokeWidth=10
+}}
+
+&ltstyle>
+  .foo  { fill: deeppink; }
+  .bar  { fill: lightpink; }
+  .baz  { fill: hotpink; }
+  .quux { fill: lightsalmon; }
+&lt/style>
+</pre>
+
+{{svg-pie
+  data=(array
+    (hash value=30   class="foo")
+    (hash value=12.5 class="bar")
+    (hash value=12.5 class="baz")
+    (hash value=30   class="quux")
+  )
+  size=150
+  stroke="black"
+  strokeWidth=10
+}}
+
+<style>
+  .foo  { fill: deeppink; }
+  .bar  { fill: lightpink; }
+  .baz  { fill: hotpink; }
+  .quux { fill: lightsalmon; }
+</style>
