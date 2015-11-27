@@ -7,6 +7,7 @@ This project uses SemVer.
 
 ### Documentation
 - Badges. :sunglasses:
+- Updated dummy app ENV for Github Pages.
 
 
 ## [1.0.1]
