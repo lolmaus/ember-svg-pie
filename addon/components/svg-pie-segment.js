@@ -52,8 +52,8 @@ export default E.Component.extend({
     return this.get('halfWidth') + this.get('radius') * Math.sin(this.get('endAngle') * (Math.PI / 180));
   }),
 
-  largeArcFlag: E.computed('startAngle', 'endAngle', function () {
-    return this.get('startAngle') - this.get('endAngle') > 180 ? 1 : 0;
+  largeArcFlag: E.computed('angle', function () {
+    return this.get('angle') > 180 ? 1 : 0;
   }),
 
   sweepFlag: E.computed('startAngle', 'endAngle', function () {

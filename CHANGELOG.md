@@ -5,6 +5,15 @@ This project uses SemVer.
 
 ## [unreleased]
 
+No unreleased changes so far.
+
+
+
+## [1.1.0]
+
+### Fixed
+- `largeArcFlag` calculated correctly.
+
 ### Documentation
 - Badges. :sunglasses:
 - Updated dummy app ENV for Github Pages.

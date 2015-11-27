@@ -4,6 +4,15 @@
   <a href="https://github.com/lolmaus/ember-svg-pie/">lolmaus/ember-svg-pie</a>
 </p>
 
+{{svg-pie
+  data=(array
+    (hash value=90  color="red")
+    (hash value=60  color="yellow")
+    (hash value=180 color="green")
+  )
+  total=360
+}}
+
 <pre>
 &#123;&#123;svg-pie
   data=(array
@@ -15,16 +24,26 @@
 }}
 </pre>
 
+<hr>
+
 {{svg-pie
   data=(array
-    (hash value=90  color="red")
-    (hash value=60  color="yellow")
-    (hash value=180 color="green")
+    (hash value=30   class="foo")
+    (hash value=12.5 class="bar")
+    (hash value=12.5 class="baz")
+    (hash value=30   class="quux")
   )
-  total=360
+  size=150
+  stroke="black"
+  strokeWidth=10
 }}
 
-<hr>
+<style>
+  .foo  { fill: deeppink; }
+  .bar  { fill: lightpink; }
+  .baz  { fill: hotpink; }
+  .quux { fill: lightsalmon; }
+</style>
 
 <pre>
 &#123;&#123;svg-pie
@@ -47,21 +66,61 @@
 &lt;/style>
 </pre>
 
-{{svg-pie
-  data=(array
-    (hash value=30   class="foo")
-    (hash value=12.5 class="bar")
-    (hash value=12.5 class="baz")
-    (hash value=30   class="quux")
-  )
-  size=150
-  stroke="black"
-  strokeWidth=10
-}}
+<hr>
+
+<div class="zomg">
+  {{svg-pie
+    data=(hash value=10 color="deepskyblue")
+    total=18
+  }}
+</div>
 
 <style>
-  .foo  { fill: deeppink; }
-  .bar  { fill: lightpink; }
-  .baz  { fill: hotpink; }
-  .quux { fill: lightsalmon; }
+  .zomg {
+    position: relative;
+    display:  table;
+  }
+  .zomg:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+  }
+  .zomg svg {
+    display: block;
+  }
 </style>
+
+<pre>
+&#123;&#123;svg-pie
+  data=(hash value=10 color="deepskyblue")
+  total=18
+  class="zomg"
+}}
+
+&lt;style>
+  .zomg {
+    position: relative;
+    display:  table;
+  }
+  .zomg:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+  }
+  .zomg svg {
+    display: block;
+  }
+&lt;/style>
+</pre>
