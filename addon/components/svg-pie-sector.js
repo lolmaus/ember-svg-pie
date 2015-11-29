@@ -1,5 +1,5 @@
 import E from 'ember';
-import layout from '../templates/components/svg-pie-segment';
+import layout from '../templates/components/svg-pie-sector';
 
 export default E.Component.extend({
 
@@ -29,7 +29,8 @@ export default E.Component.extend({
   }),
 
   angle: E.computed('value', 'total', function() {
-    return this.get('value') / this.get('total') * 360;
+    const angle = this.get('value') / this.get('total') * 360;
+    return angle < 359.99 ? angle : 359.99;
   }),
 
   endAngle: E.computed('startAngle', 'angle', function () {

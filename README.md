@@ -25,14 +25,14 @@ In Ember 2.2.x or lower, install the `hash` helper polyfill:
 
 Use the `{{svg-pie}}` component with the following arguments:
 
-* `data` (array or object, required) -- a segment or array of segments that represent the data do plot. Each segment is an object with the following key-value pairs:
-  * `value` (number, required) -- value of this segment.
-  * `color` (string, optional) -- fill color for the segment.
-  * `class` (string, optional) -- HTML class to apply to the segment. If you omit `color`, you can use this HTML class to color the segment with `.class {fill: deeppink}`.
-* `total` (number, optional) -- the overall value. Useful if you want to display a partial circle. If omitted, a sum of all segment values is used as a total.
+* `data` (array or object, required) -- a sector or array of sectors that represent the data do plot. Each sector is an object with the following key-value pairs:
+  * `value` (number, required) -- value of this sector.
+  * `color` (string, optional) -- fill color for the sector.
+  * `class` (string, optional) -- HTML class to apply to the sector. If you omit `color`, you can use this HTML class to color the sector with `.class {fill: deeppink}`.
+* `total` (number, optional) -- the overall value. Useful if you want to display a partial circle. If omitted, a sum of all sector values is used as a total.
 * `size` (number, default `100`) -- the width and height of the SVG in px.
-* `startAngle` (number, default `-90` aka 12 o'clock) -- the start angle of the first segment in degrees. `0` corresponds to three o'clock.
-* `stroke` (string, optional) -- color of the segments' outline.
+* `startAngle` (number, default `-90` aka 12 o'clock) -- the start angle of the first sector in degrees. `0` corresponds to three o'clock.
+* `stroke` (string, optional) -- color of the sectors' outline.
 * `strokeWidth` (number, default `0`) -- stroke width in px.
 
 

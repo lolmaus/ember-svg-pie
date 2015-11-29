@@ -9,6 +9,16 @@ No unreleased changes so far.
 
 
 
+## [1.2.0]
+
+### Fixed
+- A segment with value equal to or larger than the total is now correctly rendered as a full circle.
+
+### Changed
+- `svg-pie-segment` internal component renamed to `svg-pie-sector`.
+
+
+
 ## [1.1.0]
 
 ### Fixed

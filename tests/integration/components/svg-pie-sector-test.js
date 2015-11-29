@@ -2,7 +2,7 @@ import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('svg-pie-segment', 'Integration | Component | svg pie segment', {
+moduleForComponent('svg-pie-sector', 'Integration | Component | svg pie sector', {
   integration: true,
 
   beforeEach () {
@@ -48,7 +48,7 @@ test('it renders', function(assert) {
   // Template block usage:" + EOL +
   this.render(hbs`
     <svg>
-      {{svg-pie-segment
+      {{svg-pie-sector
         class=klass
         fill=fill
         size=size
@@ -61,14 +61,14 @@ test('it renders', function(assert) {
     </svg>
   `);
 
-  const $segment = this.$('g');
+  const $sector = this.$('g');
 
-  assert.ok($segment.hasClass('klass'),                "$segment.hasClass('klass')");
-  assert.equal($segment.attr('fill'),         'red',   "$segment.attr('fill')");
-  assert.equal($segment.attr('stroke'),       'black', "$segment.attr('width')");
-  assert.equal($segment.attr('stroke-width'), '0',     "$segment.attr('stroke-width')");
+  assert.ok($sector.hasClass('klass'),                "$sector.hasClass('klass')");
+  assert.equal($sector.attr('fill'),         'red',   "$sector.attr('fill')");
+  assert.equal($sector.attr('stroke'),       'black', "$sector.attr('width')");
+  assert.equal($sector.attr('stroke-width'), '0',     "$sector.attr('stroke-width')");
 
-  const $path = $segment.find('path');
+  const $path = $sector.find('path');
   const d     = $path.attr('d').trim().replace(/\s+/g, ' ');
   assert.equal(d, 'M 50 50 L 50 0 A 50 50 0 0 1 100 50 z');
 });

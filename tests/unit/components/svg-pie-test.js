@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 
 moduleForComponent('svg-pie', 'Unit | Component | svg pie', {
   // Specify the other units that are required for this test
-  needs: ['helper:svg-pie-start-angle', 'component:svg-pie-segment'],
+  needs: ['helper:svg-pie-start-angle', 'component:svg-pie-sector'],
   unit: true
 });
 
