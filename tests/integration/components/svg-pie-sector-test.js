@@ -70,5 +70,5 @@ test('it renders', function(assert) {
 
   const $path = $sector.find('path');
   const d     = $path.attr('d').trim().replace(/\s+/g, ' ');
-  assert.equal(d, 'M 50 50 L 50 0 A 50 50 0 0 1 100 50 z');
+  assert.equal(d, 'M 50 50 L 50 0 A 50 50 0 0 1 100 50 Z');
 });
