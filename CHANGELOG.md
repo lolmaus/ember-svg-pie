@@ -9,6 +9,16 @@ No unreleased changes so far.
 
 
 
+## [1.3.0]
+
+### Changed
+- Upgraded to Ember CLI 2.8.0.
+
+### Added
+- `fluid` option (default false).
+
+
+
 ## [1.2.0]
 
 ### Fixed

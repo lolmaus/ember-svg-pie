@@ -34,6 +34,7 @@ Use the `{{svg-pie}}` component with the following arguments:
 * `startAngle` (number, default `-90` aka 12 o'clock) -- the start angle of the first sector in degrees. `0` corresponds to three o'clock.
 * `stroke` (string, optional) -- color of the sectors' outline.
 * `strokeWidth` (number, default `0`) -- stroke width in px.
+* `fluid` (boolean, default `false`) -- whether the SVG should stretch, i. e. behave like an `<img>` with `width: 100%, height: auto`. Default size should be overridden by CSS.
 
 
 See [demo](https://lolmaus.github.io/ember-svg-pie/) for code samples and results!

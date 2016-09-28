@@ -10,11 +10,12 @@ export default E.Component.extend({
   startAngle:  -90,
   stroke:      null,
   strokeWidth: 0,
+  fluid:       false,
 
   // ----- Overridden properties -----
   tagName: 'svg',
   layout,
-  attributeBindings: ['size:width', 'size:height'],
+  attributeBindings: ['size:width', 'size:height', 'viewBox', 'preserveAspectRatio'],
 
   // ----- Computed properties -----
   effectiveData: E.computed('data', function () {
@@ -24,6 +25,22 @@ export default E.Component.extend({
 
   effectiveTotal: E.computed('total', 'data.@each.value', function () {
     const total = this.get('total');
-    return total ? total : this.get('data').reduce((sum, item) => sum + E.get(item, 'value'), 0);
-  })
+    if (total) { return total; }
+
+    const data = this.get('data');
+    return E.isArray(data) && data.reduce((sum, item) => sum + E.get(item, 'value'), 0);
+  }),
+
+  viewBox: E.computed('fluid', 'size', function () {
+    if (this.get('fluid')) {
+      const size = this.get('size');
+      return `0 0 ${size} ${size}`;
+    }
+  }),
+
+  preserveAspectRatio: E.computed('fluid', function () {
+    if (this.get('fluid')) {
+      return "xMinYMin";
+    }
+  }),
 });
