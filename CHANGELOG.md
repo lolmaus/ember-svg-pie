@@ -9,6 +9,13 @@ No unreleased changes so far.
 
 
 
+## [1.3.1]
+
+### Fixed
+- Added default value for the angle, prevents console errors.
+
+
+
 ## [1.3.0]
 
 ### Changed
