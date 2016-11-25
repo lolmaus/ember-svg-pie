@@ -6,7 +6,7 @@ export function svgPieStartAngle(params, {data, index, total, start}) {
   return data
     .slice(0, index)
     .reduce((sum, item) => {
-      const angle = item.value / total * 360;
+      const angle = item.value / total * 360 || 0;
       return sum + angle;
     }, start);
 }
